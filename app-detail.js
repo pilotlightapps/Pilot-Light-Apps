@@ -141,5 +141,7 @@
   }
   cta.append(ctaCopy, ctaActions);
 
-  root.append(hero, notice, features, guides, help, cta);
+  root.append(hero, notice, features, guides);
+  if ((app.guides || []).length) root.append(help);
+  root.append(cta);
 })();

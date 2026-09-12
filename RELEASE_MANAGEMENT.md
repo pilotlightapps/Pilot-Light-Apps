@@ -55,7 +55,7 @@ URL when the bytes change so an old checksum never describes a newer file.
 - Push one reviewed commit to `main` and wait for GitHub Pages to finish.
 - Verify `https://pilotlightapps.com/` rather than assuming a successful push is
   the same as a successful public deployment.
-- Synchronize the verified public source back to `H:\Tools\pilot-light-apps`.
+- Synchronize the verified public source back to the private canonical website source.
 
 ## Analytics
 

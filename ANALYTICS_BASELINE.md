@@ -111,3 +111,16 @@ links keep each app's GitHub asset count separate as the catalog expands.
 - Support-email routing was intentionally deferred while app and project inboxes
   are consolidated separately. No Gmail, Cloudflare Email Routing, or DNS change
   is part of this distribution checkpoint.
+
+## Picture Pilot testing launch baseline
+
+- Recorded: 2026-09-12 before the testing release and website page were published.
+- GitHub tag: `picture-pilot-sorter-v0.5.0-beta.2-testing`.
+- Release asset: `PicturePilotSorter-Windows-0.5.0-beta.2.zip`.
+- GitHub download count before publication: **0**.
+- ZIP size: **51,296,382 bytes**.
+- ZIP SHA-256:
+  `08FC29E19EFE0201AC648B715AD148D9BFE504B331546A546AF6162042E1BBA0`.
+- The website status is **Testing — not final**. Marketing and general feedback
+  outreach remain on hold until the user downloads this exact asset through the
+  live site and completes the separate-computer acceptance test.

@@ -10,12 +10,14 @@ A free static website designed for GitHub Pages. App cards are data-driven so th
 - Wallpaper Pilot on itch.io: `https://echoofhumanity50.itch.io/wallpaper-pilot`
 - Display / Audio Switcher 1.0.0: `https://github.com/pilotlightapps/Pilot-Light-Apps/releases/download/display-audio-switcher-v1.0.0/DisplayAudioSwitcher-Windows.zip`
 - Display / Audio Switcher on itch.io: `https://echoofhumanity50.itch.io/display-audio-switcher`
+- Picture Pilot Sorter 0.5.0-beta.2 testing build: `https://github.com/pilotlightapps/Pilot-Light-Apps/releases/download/picture-pilot-sorter-v0.5.0-beta.2-testing/PicturePilotSorter-Windows-0.5.0-beta.2.zip`
 - Donate: `https://buymeacoffee.com/capto50z`
 - Wallpaper Pilot status: `Available`
 - Display / Audio Switcher status: `Available`
+- Picture Pilot Sorter status: `Testing — not final`
 - Screenshot: `assets/wallpaper-pilot-screenshot.png`
 - Switcher screenshot: `assets/display-audio-switcher-screenshot.png`
-- Dedicated pages: `wallpaper-pilot.html` and `display-audio-switcher.html`
+- Dedicated pages: `wallpaper-pilot.html`, `display-audio-switcher.html`, and `picture-pilot.html`
 
 The website uses version-specific GitHub release URLs. This prevents a release
 for one app from silently changing another app's Download button. When an app is
