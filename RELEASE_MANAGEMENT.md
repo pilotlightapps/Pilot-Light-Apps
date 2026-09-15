@@ -28,6 +28,13 @@ Each public release should include:
 3. Release notes with the version, supported platform, installation steps,
    known limitations, signing status, and the same SHA-256 value.
 
+The customer download and the archival release package are different artifacts.
+Customer ZIPs must contain only the files required to run or install the app.
+Release notes, privacy documents, verification artifacts, source files, manifests,
+and internal records stay outside the customer ZIP as separate release assets or
+repository records. Before uploading, enumerate the ZIP entries and fail the
+release if any unapproved file or folder is present.
+
 Keep asset names stable within an app line. Use a new tag and version-specific
 URL when the bytes change so an old checksum never describes a newer file.
 

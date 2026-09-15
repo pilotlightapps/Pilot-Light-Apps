@@ -157,8 +157,8 @@ window.PILOT_LIGHT_APPS = [
     ],
     installSteps: [
       "Download PicturePilotSorter-Windows-0.5.0-beta.2.zip.",
-      "Choose Extract All and keep the complete extracted package together.",
-      "Open the App folder and run Picture Pilot Testing.exe.",
+      "Choose Extract All.",
+      "Run Picture Pilot Testing.exe from the extracted folder.",
       "Follow the first-run guide, then choose a copied or non-critical photo folder for this test."
     ],
     goodToKnow: [
@@ -166,6 +166,7 @@ window.PILOT_LIGHT_APPS = [
       "Picture Pilot stores settings and sorting history locally under your Windows Local AppData folder.",
       "Original photos are read but never moved, renamed, edited, overwritten, or deleted.",
       "Smart Groups runs locally and never assigns a tag without you.",
+      "The download contains one portable application file; release records remain on the website.",
       "The app is photo-only and is not digitally signed yet."
     ],
     guides: [],
