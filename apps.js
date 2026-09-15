@@ -141,10 +141,10 @@ window.PILOT_LIGHT_APPS = [
     status: "Testing — not final",
     statusTone: "testing",
     platform: "Windows desktop",
-    version: "0.5.0-beta.2",
+    version: "0.5.0-beta.3",
     tagline: "Turn a large photo collection into useful, verified folders.",
-    description: "Picture Pilot helps you review local photo collections, create your own tags, revisit focused sorting passes, and build organized folders without changing the originals.",
-    homeHighlights: ["Custom layered tags", "Local Smart Groups", "Verified folder output"],
+    description: "Picture Pilot helps you review local photo collections, reconcile file counts, inspect exact duplicates, create your own tags, revisit focused sorting passes, and build organized folders without changing the originals.",
+    homeHighlights: ["Custom layered tags", "Local Smart Groups", "Exact duplicate review"],
     features: [
       "Custom tags with numbered keyboard shortcuts",
       "Normal, Shift-click, and Ctrl-click multi-photo selection",
@@ -152,11 +152,13 @@ window.PILOT_LIGHT_APPS = [
       "Standard similarity groups and optional local Smart Groups",
       "All-photo, untagged-photo, and tag-filtered sorting passes",
       "Tag browsing, Undo, and point-centered photo zoom",
-      "New dated output folders with verified copies",
+      "Scan report for physical files, prior work, unreadable files, and exact duplicates",
+      "Side-by-side exact duplicate review with a fresh SHA-256 confirmation",
+      "New dated output folders with verified copies and one exported file per exact image per tag",
       "Local backup, restore, and guarded uninstall tools"
     ],
     installSteps: [
-      "Download PicturePilotSorter-Windows-0.5.0-beta.2.zip.",
+      "Download PicturePilotSorter-Windows-0.5.0-beta.3.zip.",
       "Choose Extract All.",
       "Run Picture Pilot Testing.exe from the extracted folder.",
       "Follow the first-run guide, then choose a copied or non-critical photo folder for this test."
@@ -166,6 +168,7 @@ window.PILOT_LIGHT_APPS = [
       "Picture Pilot stores settings and sorting history locally under your Windows Local AppData folder.",
       "Original photos are read but never moved, renamed, edited, overwritten, or deleted.",
       "Smart Groups runs locally and never assigns a tag without you.",
+      "Only byte-for-byte exact duplicate images are consolidated during folder building; visually similar photos are never treated as duplicates.",
       "The download contains one portable application file; release records remain on the website.",
       "The app is photo-only and is not digitally signed yet."
     ],
@@ -174,12 +177,12 @@ window.PILOT_LIGHT_APPS = [
     imageAlt: "Pilot Light Apps compass-and-lantern mark representing the Picture Pilot Sorter testing build",
     downloadLabel: "Download Picture Pilot testing build",
     shortDownloadLabel: "Download test build",
-    downloadUrl: "https://github.com/pilotlightapps/Pilot-Light-Apps/releases/download/picture-pilot-sorter-v0.5.0-beta.2-testing/PicturePilotSorter-Windows-0.5.0-beta.2.zip",
+    downloadUrl: "https://github.com/pilotlightapps/Pilot-Light-Apps/releases/download/picture-pilot-sorter-v0.5.0-beta.3-testing/PicturePilotSorter-Windows-0.5.0-beta.3.zip",
     downloadNotice: {
       title: "Testing build and unsigned-app notice",
-      text: "Picture Pilot 0.5.0-beta.2 is an early testing build, not a finished release. Test it with copied or non-critical photos first. The app is independently published and not yet digitally signed, so Windows may show an unfamiliar-app or unknown-publisher warning. Download only from this official page.",
+      text: "Picture Pilot 0.5.0-beta.3 is an early testing build, not a finished release. Test it with copied or non-critical photos first. The app is independently published and not yet digitally signed, so Windows may show an unfamiliar-app or unknown-publisher warning. Download only from this official page.",
       detailsLabel: "View testing notes and verify the ZIP checksum",
-      detailsUrl: "https://github.com/pilotlightapps/Pilot-Light-Apps/releases/tag/picture-pilot-sorter-v0.5.0-beta.2-testing"
+      detailsUrl: "https://github.com/pilotlightapps/Pilot-Light-Apps/releases/tag/picture-pilot-sorter-v0.5.0-beta.3-testing"
     }
   }
 ];
