@@ -124,3 +124,76 @@ links keep each app's GitHub asset count separate as the catalog expands.
 - The website status is **Testing — not final**. Marketing and general feedback
   outreach remain on hold until the user downloads this exact asset through the
   live site and completes the separate-computer acceptance test.
+
+## September 14 distribution and search checkpoint
+
+- GitHub release-asset counts were **10** for Wallpaper Pilot `v1.0.1`, **2**
+  for Display / Audio Switcher `v1.0.0`, and **2** for Picture Pilot Sorter
+  `0.5.0-beta.2`. Compared with the August 24 campaign baselines, this is four
+  additional Wallpaper Pilot downloads and one additional Switcher download.
+  One of the two Picture Pilot downloads is the identified Pilot Light Apps
+  public-verification download. These remain download events, not unique-user
+  or successful-installation counts.
+- itch.io's last-30-days creator dashboard showed **1 view / 0 downloads** for
+  Display / Audio Switcher and **0 views / 0 downloads** for Wallpaper Pilot,
+  with no recorded revenue or payment. Both full-release apps remain public on
+  itch.io; Picture Pilot is intentionally absent while testing continues.
+- Cloudflare Web Analytics showed **0 visits / 0 page views** for the preceding
+  seven days.
+- Google Search Console's three-month report showed **52 impressions, 1 click,
+  1.9% CTR, and average position 18.7**. The latest seven-day window showed
+  **6 impressions, 0 clicks, 0% CTR, and average position 15.5**.
+- Google's submitted sitemap was still marked Success but had last been read on
+  September 6 and reported **10 discovered pages**. The current sitemap has 11
+  URLs, and URL Inspection reported that
+  `https://pilotlightapps.com/picture-pilot.html` was unknown to Google. On
+  September 14, the current sitemap was successfully resubmitted and Google
+  accepted a Picture Pilot indexing request into its priority crawl queue.
+  Discovery and indexing counts have not updated yet.
+- Bing Webmaster Tools is configured for `https://pilotlightapps.com/`. Its
+  visible sitemap row was successful, last submitted and crawled on September 4,
+  and reported **10 discovered URLs**. Bing's summary showed 2 known sitemaps and
+  20 total discovered URLs although only one row was visible. On September 14,
+  Bing accepted the current sitemap for processing; the row showed the new
+  submission date while retaining the September 4 crawl and 10 discovered URLs.
+- Reddit's current public counts were **567 views / 2 upvotes / 1 comment** for
+  the September 9 Wallpaper Pilot post in `r/software`, **428 views / 2 upvotes
+  / 0 comments** for the Display / Audio Switcher post in `r/windowsapps`, and
+  **3.2K views / 8 upvotes / 3 comments** for the earlier Wallpaper Pilot post
+  in `r/windowsapps`. The one new `r/software` comment was a hostile AI/developer
+  accusation rather than a support question; no reply was sent.
+- AlternativeTo confirmed that Wallpaper Pilot and Display / Audio Switcher
+  were both submitted on September 4 and are still awaiting review in the normal
+  queue. Pending submissions do not appear in public search. Optional priority
+  review costs **$5 per app** and was not purchased. The account showed no chats
+  and no notifications requiring a response.
+- Buy Me a Coffee's `capto50z` owner dashboard showed **0 supporters and $0
+  all-time**, and its unread Messages view was empty.
+- The Zoho support mailbox session was restored and live-verified on September
+  14. Inbox, unread mail, spam, notifications, and All Messages contained no
+  customer questions or support requests requiring a response. The unread items
+  were three sign-in OTP messages, Zoho welcome mail, and a Zoho product update;
+  spam contained one Zoho marketing message. Nothing was sent or deleted.
+
+## September 15 Picture Pilot beta.3 testing update
+
+- Picture Pilot Sorter `0.5.0-beta.3` was published as a GitHub prerelease on
+  2026-09-15. It remains **Testing — not final**; wider marketing is still on
+  hold until the user downloads this exact build from the live site and completes
+  the separate-computer acceptance test.
+- GitHub tag: `picture-pilot-sorter-v0.5.0-beta.3-testing`.
+- Release asset: `PicturePilotSorter-Windows-0.5.0-beta.3.zip`.
+- GitHub download count immediately after publication: **0**.
+- ZIP size: **51,301,993 bytes**.
+- ZIP SHA-256:
+  `D294A9E13E553F8FA3353FBAFF6189EC9A9E3060E418E4EF60BE803F49E92833`.
+- Executable SHA-256:
+  `811A2C0E489F620C1FD0F78011F7F0FD743293C0BF7A9E76A01B5C108C0EA194`.
+- The GitHub release asset row exposed the expected filename, 48.9 MB display
+  size, and matching SHA-256 digest. The public Picture Pilot page and homepage
+  both showed version `0.5.0-beta.3` with the **Testing — not final** status and
+  the exact version-specific download link.
+- This beta adds the Scan Report and guarded exact-duplicate reconciliation.
+  Only byte-for-byte identical files are consolidated during folder building;
+  similar-looking images are never treated as duplicates, and originals remain
+  untouched.
