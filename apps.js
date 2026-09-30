@@ -141,7 +141,7 @@ window.PILOT_LIGHT_APPS = [
     status: "Testing — not final",
     statusTone: "testing",
     platform: "Windows desktop",
-    version: "0.5.0-beta.4",
+    version: "0.5.0-beta.5",
     tagline: "Turn a large photo collection into useful, verified folders.",
     description: "Picture Pilot helps you review local photo collections, account for every physical file, inspect exact duplicates, create your own tags, revisit focused sorting passes, and build organized folders without changing the originals.",
     homeHighlights: ["Custom layered tags", "HEIC + common photos", "Full scan accounting"],
@@ -152,7 +152,7 @@ window.PILOT_LIGHT_APPS = [
       "Standard similarity groups and optional local Smart Groups",
       "All-photo, untagged-photo, and tag-filtered sorting passes",
       "Tag browsing, Undo, and point-centered photo zoom",
-      "HEIC/HEIF and common photo formats, using the Windows photo codecs for Apple images",
+      "HEIC/HEIF and common photo formats, with a bundled local decoder for Apple images",
       "Scan report totals for photos, videos, unsupported formats, other files, prior work, unreadable files, and exact duplicates",
       "Browse every excluded video, unsupported image, or other file by path and extension",
       "Side-by-side exact duplicate review with a fresh SHA-256 confirmation",
@@ -160,7 +160,7 @@ window.PILOT_LIGHT_APPS = [
       "Local backup, restore, and guarded uninstall tools"
     ],
     installSteps: [
-      "Download PicturePilotSorter-Windows-0.5.0-beta.4.zip.",
+      "Download PicturePilotSorter-Windows-0.5.0-beta.5.zip.",
       "Choose Extract All.",
       "Run Picture Pilot Testing.exe from the extracted folder.",
       "Follow the first-run guide, then choose a copied or non-critical photo folder for this test."
@@ -172,7 +172,7 @@ window.PILOT_LIGHT_APPS = [
       "Smart Groups runs locally and never assigns a tag without you.",
       "Only byte-for-byte exact duplicate images are consolidated during folder building; visually similar photos are never treated as duplicates.",
       "Videos are detected, counted, and listed so folder totals reconcile, but this app remains photo-only.",
-      "HEIC/HEIF support uses the Microsoft photo codecs installed in Windows. If a codec is missing, Picture Pilot lists the unreadable photo and leaves it untouched.",
+      "HEIC/HEIF support includes a bundled local decoder and does not require Microsoft's optional photo codecs. Damaged or unsupported variations are listed as unreadable and left untouched.",
       "The download contains one portable application file; release records remain on the website.",
       "The app is photo-only and is not digitally signed yet."
     ],
@@ -181,12 +181,12 @@ window.PILOT_LIGHT_APPS = [
     imageAlt: "Pilot Light Apps compass-and-lantern mark representing the Picture Pilot Sorter testing build",
     downloadLabel: "Download Picture Pilot testing build",
     shortDownloadLabel: "Download test build",
-    downloadUrl: "https://github.com/pilotlightapps/Pilot-Light-Apps/releases/download/picture-pilot-sorter-v0.5.0-beta.4-testing/PicturePilotSorter-Windows-0.5.0-beta.4.zip",
+    downloadUrl: "https://github.com/pilotlightapps/Pilot-Light-Apps/releases/download/picture-pilot-sorter-v0.5.0-beta.5-testing/PicturePilotSorter-Windows-0.5.0-beta.5.zip",
     downloadNotice: {
       title: "Testing build and unsigned-app notice",
-      text: "Picture Pilot 0.5.0-beta.4 is an early testing build, not a finished release. This update adds HEIC support and complete folder-count accounting for retesting. Test it with copied or non-critical photos first. The app is independently published and not yet digitally signed, so Windows may show an unfamiliar-app or unknown-publisher warning. Download only from this official page.",
+      text: "Picture Pilot 0.5.0-beta.5 is an early testing build, not a finished release. This update adds bundled HEIC support and complete folder-count accounting for retesting. Test it with copied or non-critical photos first. The app is independently published and not yet digitally signed, so Windows may show an unfamiliar-app or unknown-publisher warning. Download only from this official page.",
       detailsLabel: "View testing notes and verify the ZIP checksum",
-      detailsUrl: "https://github.com/pilotlightapps/Pilot-Light-Apps/releases/tag/picture-pilot-sorter-v0.5.0-beta.4-testing"
+      detailsUrl: "https://github.com/pilotlightapps/Pilot-Light-Apps/releases/tag/picture-pilot-sorter-v0.5.0-beta.5-testing"
     }
   }
 ];
