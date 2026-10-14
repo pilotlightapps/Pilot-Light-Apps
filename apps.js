@@ -138,10 +138,10 @@ window.PILOT_LIGHT_APPS = [
     slug: "picture-pilot",
     pageUrl: "picture-pilot.html",
     name: "Picture Pilot Sorter",
-    status: "Testing — not final",
+    status: "Public test — not final",
     statusTone: "testing",
     platform: "Windows desktop",
-    version: "0.5.0-beta.5",
+    version: "0.5.0-beta.6",
     tagline: "Turn a large photo collection into useful, verified folders.",
     description: "Picture Pilot helps you review local photo collections, account for every physical file, inspect exact duplicates, create your own tags, revisit focused sorting passes, and build organized folders without changing the originals.",
     homeHighlights: ["Custom layered tags", "HEIC + common photos", "Full scan accounting"],
@@ -157,36 +157,39 @@ window.PILOT_LIGHT_APPS = [
       "Browse every excluded video, unsupported image, or other file by path and extension",
       "Side-by-side exact duplicate review with a fresh SHA-256 confirmation",
       "New dated output folders with verified copies and one exported file per exact image per tag",
-      "Local backup, restore, and guarded uninstall tools"
+      "Local backup, restore, and guarded uninstall tools",
+      "Built-in public-test safety notice, tutorial, and feedback shortcut"
     ],
     installSteps: [
-      "Download PicturePilotSorter-Windows-0.5.0-beta.5.zip.",
+      "Download PicturePilotSorter-Windows-0.5.0-beta.6.zip.",
       "Choose Extract All.",
       "Run Picture Pilot Testing.exe from the extracted folder.",
       "Follow the first-run guide, then choose a copied or non-critical photo folder for this test."
     ],
     goodToKnow: [
-      "This is a testing build. Please wait for the final release before relying on it as the only record of important sorting work.",
+      "This is a public test build. Back up irreplaceable photos first and begin with a copied or non-critical folder.",
+      "Do not delete original photos after building folders until you have independently checked the Scan report and completed output.",
       "Picture Pilot stores settings and sorting history locally under your Windows Local AppData folder.",
       "Original photos are read but never moved, renamed, edited, overwritten, or deleted.",
       "Smart Groups runs locally and never assigns a tag without you.",
       "Only byte-for-byte exact duplicate images are consolidated during folder building; visually similar photos are never treated as duplicates.",
       "Videos are detected, counted, and listed so folder totals reconcile, but this app remains photo-only.",
       "HEIC/HEIF support includes a bundled local decoder and does not require Microsoft's optional photo codecs. Damaged or unsupported variations are listed as unreadable and left untouched.",
+      "Use the in-app Feedback button to report unexpected file counts, unreadable photos, duplicate mistakes, crashes, or incorrect output.",
       "The download contains one portable application file; release records remain on the website.",
       "The app is photo-only and is not digitally signed yet."
     ],
     guides: [],
-    image: "assets/picture-pilot-testing-icon.png",
-    imageAlt: "Pilot Light Apps compass-and-lantern mark representing the Picture Pilot Sorter testing build",
-    downloadLabel: "Download Picture Pilot testing build",
-    shortDownloadLabel: "Download test build",
-    downloadUrl: "https://github.com/pilotlightapps/Pilot-Light-Apps/releases/download/picture-pilot-sorter-v0.5.0-beta.5-testing/PicturePilotSorter-Windows-0.5.0-beta.5.zip",
+    image: "assets/picture-pilot-screenshot.jpg",
+    imageAlt: "Picture Pilot Sorter public-test window with folder controls, sorting passes, photo workspace, custom tags, Smart Groups, and verified folder building",
+    downloadLabel: "Download Picture Pilot public test",
+    shortDownloadLabel: "Download public test",
+    downloadUrl: "https://github.com/pilotlightapps/Pilot-Light-Apps/releases/download/picture-pilot-sorter-v0.5.0-beta.6-public-test/PicturePilotSorter-Windows-0.5.0-beta.6.zip",
     downloadNotice: {
-      title: "Testing build and unsigned-app notice",
-      text: "Picture Pilot 0.5.0-beta.5 is an early testing build, not a finished release. This update adds bundled HEIC support and complete folder-count accounting for retesting. Test it with copied or non-critical photos first. The app is independently published and not yet digitally signed, so Windows may show an unfamiliar-app or unknown-publisher warning. Download only from this official page.",
-      detailsLabel: "View testing notes and verify the ZIP checksum",
-      detailsUrl: "https://github.com/pilotlightapps/Pilot-Light-Apps/releases/tag/picture-pilot-sorter-v0.5.0-beta.5-testing"
+      title: "Public test, backup, and unsigned-app notice",
+      text: "Picture Pilot 0.5.0-beta.6 is a public test build, not a finished release. Back up irreplaceable photos and begin with a copied or non-critical folder. Do not delete originals until you have independently checked the Scan report and completed output. The app is independently published and not yet digitally signed, so Windows may show an unfamiliar-app or unknown-publisher warning. Download only from this official page.",
+      detailsLabel: "View public-test notes and verify the ZIP checksum",
+      detailsUrl: "https://github.com/pilotlightapps/Pilot-Light-Apps/releases/tag/picture-pilot-sorter-v0.5.0-beta.6-public-test"
     }
   }
 ];
