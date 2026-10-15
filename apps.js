@@ -141,7 +141,7 @@ window.PILOT_LIGHT_APPS = [
     status: "Public test — not final",
     statusTone: "testing",
     platform: "Windows desktop",
-    version: "0.5.0-beta.6",
+    version: "0.5.0-beta.7",
     tagline: "Turn a large photo collection into useful, verified folders.",
     description: "Picture Pilot helps you review local photo collections, account for every physical file, inspect exact duplicates, create your own tags, revisit focused sorting passes, and build organized folders without changing the originals.",
     homeHighlights: ["Custom layered tags", "HEIC + common photos", "Full scan accounting"],
@@ -161,9 +161,9 @@ window.PILOT_LIGHT_APPS = [
       "Built-in public-test safety notice, tutorial, and feedback shortcut"
     ],
     installSteps: [
-      "Download PicturePilotSorter-Windows-0.5.0-beta.6.zip.",
+      "Download PicturePilotSorter-Windows-0.5.0-beta.7.zip.",
       "Choose Extract All.",
-      "Run Picture Pilot Testing.exe from the extracted folder.",
+      "Run Picture Pilot Testing.exe once from the extracted folder. The first launch can take up to a minute while Windows scans and unpacks the portable app.",
       "Follow the first-run guide, then choose a copied or non-critical photo folder for this test."
     ],
     goodToKnow: [
@@ -180,16 +180,16 @@ window.PILOT_LIGHT_APPS = [
       "The app is photo-only and is not digitally signed yet."
     ],
     guides: [],
-    image: "assets/picture-pilot-screenshot.jpg",
-    imageAlt: "Picture Pilot Sorter public-test window with folder controls, sorting passes, photo workspace, custom tags, Smart Groups, and verified folder building",
+    image: "assets/picture-pilot-icon.png",
+    imageAlt: "Picture Pilot icon with overlapping photo frames, a compass ring, and an amber confirmation mark",
     downloadLabel: "Download Picture Pilot public test",
     shortDownloadLabel: "Download public test",
-    downloadUrl: "https://github.com/pilotlightapps/Pilot-Light-Apps/releases/download/picture-pilot-sorter-v0.5.0-beta.6-public-test/PicturePilotSorter-Windows-0.5.0-beta.6.zip",
+    downloadUrl: "https://github.com/pilotlightapps/Pilot-Light-Apps/releases/download/picture-pilot-sorter-v0.5.0-beta.7-public-test/PicturePilotSorter-Windows-0.5.0-beta.7.zip",
     downloadNotice: {
       title: "Public test, backup, and unsigned-app notice",
-      text: "Picture Pilot 0.5.0-beta.6 is a public test build, not a finished release. Back up irreplaceable photos and begin with a copied or non-critical folder. Do not delete originals until you have independently checked the Scan report and completed output. The app is independently published and not yet digitally signed, so Windows may show an unfamiliar-app or unknown-publisher warning. Download only from this official page.",
+      text: "Picture Pilot 0.5.0-beta.7 is a public test build, not a finished release. Back up irreplaceable photos and begin with a copied or non-critical folder. Do not delete originals until you have independently checked the Scan report and completed output. The app is independently published and not yet digitally signed, so Windows may show an unfamiliar-app or unknown-publisher warning. Download only from this official page.",
       detailsLabel: "View public-test notes and verify the ZIP checksum",
-      detailsUrl: "https://github.com/pilotlightapps/Pilot-Light-Apps/releases/tag/picture-pilot-sorter-v0.5.0-beta.6-public-test"
+      detailsUrl: "https://github.com/pilotlightapps/Pilot-Light-Apps/releases/tag/picture-pilot-sorter-v0.5.0-beta.7-public-test"
     }
   }
 ];
