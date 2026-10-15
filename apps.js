@@ -179,7 +179,28 @@ window.PILOT_LIGHT_APPS = [
       "The download contains one portable application file; release records remain on the website.",
       "The app is photo-only and is not digitally signed yet."
     ],
-    guides: [],
+    guides: [
+      {
+        title: "Sort a large photo collection on Windows",
+        description: "Build a safe workflow for reviewing, tagging, and organizing a large local photo library without changing the originals.",
+        url: "sort-large-photo-collection-windows.html"
+      },
+      {
+        title: "Organize AI-generated images on Windows",
+        description: "Turn export folders and repeated variations into useful, layered categories with manual control.",
+        url: "organize-ai-generated-images-windows.html"
+      },
+      {
+        title: "Find exact duplicate photos safely",
+        description: "Understand byte-for-byte duplicates, visual similarity, and why a backup-first review matters.",
+        url: "find-exact-duplicate-photos-windows.html"
+      },
+      {
+        title: "Sort HEIC photos into folders on Windows",
+        description: "Review Apple HEIC and HEIF photos locally and build organized folders without replacing the source files.",
+        url: "sort-heic-photos-into-folders-windows.html"
+      }
+    ],
     image: "assets/picture-pilot-screenshot.jpg",
     imageAlt: "Picture Pilot Sorter public-test window with folder controls, sorting passes, photo workspace, custom tags, Smart Groups, and verified folder building",
     downloadLabel: "Download Picture Pilot public test",

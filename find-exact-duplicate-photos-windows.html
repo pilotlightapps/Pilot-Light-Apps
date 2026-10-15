@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Learn how to identify byte-for-byte duplicate photos on Windows, distinguish them from similar images, and organize safely without deleting originals.">
+  <meta name="theme-color" content="#07111f">
+  <meta property="og:title" content="Find Exact Duplicate Photos Safely on Windows">
+  <meta property="og:description" content="Use content hashes, keep similar images separate, and verify a new organized output before changing the source library.">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://pilotlightapps.com/find-exact-duplicate-photos-windows.html">
+  <meta property="og:image" content="https://pilotlightapps.com/assets/picture-pilot-screenshot.jpg">
+  <title>Find Exact Duplicate Photos Safely on Windows | Pilot Light Apps</title>
+  <link rel="canonical" href="https://pilotlightapps.com/find-exact-duplicate-photos-windows.html">
+  <link rel="icon" href="assets/pilot-light-logo.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="styles.css?v=20260822-seo1">
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"TechArticle","headline":"Find Exact Duplicate Photos Safely on Windows","description":"How to identify byte-for-byte duplicate photos, distinguish them from similar images, and organize a collection without deleting originals.","datePublished":"2026-10-15","dateModified":"2026-10-15","author":{"@type":"Organization","name":"Pilot Light Apps"},"publisher":{"@type":"Organization","name":"Pilot Light Apps","url":"https://pilotlightapps.com/"},"mainEntityOfPage":"https://pilotlightapps.com/find-exact-duplicate-photos-windows.html"}
+  </script>
+</head>
+<body>
+  <a class="skip-link" href="#guide">Skip to guide</a>
+  <header class="site-header"><a class="brand" href="index.html" aria-label="Pilot Light Apps home"><img src="assets/pilot-light-logo.svg" alt="" width="44" height="44"><span>Pilot Light Apps</span></a><nav aria-label="Main navigation"><a href="index.html#apps">Apps</a><a href="index.html#guides">Guides</a><a href="index.html#about">About</a><a href="index.html#contact">Contact</a></nav></header>
+  <main id="guide" class="guide-main">
+    <header class="guide-hero"><a class="guide-breadcrumb" href="picture-pilot.html">← Picture Pilot Sorter</a><p class="eyebrow">Duplicate photo guide</p><h1>Find exact duplicate photos on Windows without confusing copies and variations</h1><p class="hero-text">Duplicate cleanup becomes dangerous when file names, visual similarity, and identical content are treated as the same thing. The first step is defining exactly what “duplicate” means.</p></header>
+    <article class="guide-article">
+      <div class="guide-summary"><strong>Short answer:</strong> Confirm exact duplicates from file contents, treat resized or edited versions as distinct, preserve the source library, and verify a new organized output before considering deletion.</div>
+
+      <h2>Same name does not mean same photo</h2>
+      <p>Phones and cameras routinely reuse names such as IMG_0001. Two files with that name may come from different devices or years. Likewise, the same photo can appear under different names after copying or downloading it again. Names are useful clues, not proof.</p>
+
+      <h2>Exact duplicates have identical bytes</h2>
+      <p>A cryptographic hash such as SHA-256 summarizes the complete file content. If two successfully read files have the same size and the same SHA-256 value, they are byte-for-byte identical. Their folder, filename, and modified date may differ without changing that fact.</p>
+      <p>A fresh hash check immediately before building output is safer than relying only on an earlier scan. It confirms that the files being handled still match the duplicate record.</p>
+
+      <h2>Similar images are not exact duplicates</h2>
+      <p>A compressed copy, thumbnail, crop, edit, screenshot, or higher-resolution version contains different bytes. Burst photos may look almost identical while preserving different expressions or moments. Similarity tools can place these files near each other for review, but automatic deletion based only on appearance risks removing something distinct.</p>
+      <p>Decide separately whether you want to keep the original, the best-looking version, every meaningful variation, or all of them. That is a curatorial decision rather than a duplicate check.</p>
+
+      <h2>A safer duplicate workflow</h2>
+      <ol>
+        <li>Back up irreplaceable photos before scanning or reorganizing.</li>
+        <li>Scan a clearly bounded folder tree and reconcile the total physical files.</li>
+        <li>Review exact duplicate groups side by side with their full paths.</li>
+        <li>Keep visually similar but non-identical files outside automatic consolidation.</li>
+        <li>Build a new organized output without deleting the source.</li>
+        <li>Compare counts, open samples, and preserve the original until the result is independently verified.</li>
+      </ol>
+
+      <h2>How Picture Pilot handles duplicates</h2>
+      <p><a href="picture-pilot.html">Picture Pilot Sorter</a> lists exact duplicate groups and lets you inspect them side by side. Before folder building, it performs a fresh SHA-256 confirmation. The output can contain one exported file per exact image per selected tag, while visually similar photos remain separate.</p>
+      <p>It does not delete duplicates or modify the originals. It also reports videos, unsupported formats, unreadable files, and other exclusions so the scan total does not quietly omit part of the selected folder tree. The current Windows build is an unsigned public test, so use a backup and start with a copied or non-critical folder.</p>
+
+      <div class="guide-callout"><h2>Review before consolidating</h2><p>Read the public-test safety notice and exact duplicate behavior on the Picture Pilot product page.</p><a class="button primary" href="picture-pilot.html">View Picture Pilot Sorter</a></div>
+      <section class="related-guides"><h2>Related photo guides</h2><ul><li><a href="sort-large-photo-collection-windows.html">Sort a large photo collection on Windows</a></li><li><a href="organize-ai-generated-images-windows.html">Organize AI-generated images on Windows</a></li><li><a href="sort-heic-photos-into-folders-windows.html">Sort HEIC photos into folders on Windows</a></li></ul></section>
+    </article>
+  </main>
+  <footer><div class="footer-brand"><img src="assets/pilot-light-logo.svg" alt="" width="34" height="34"><div><strong>Pilot Light Apps</strong><span>Simple software. Optional donations.</span></div></div><p>© <span id="year"></span> Pilot Light Apps. · <a class="footer-contact" href="privacy.html">Privacy</a> · <a class="contact-link footer-contact" href="#">Contact</a></p></footer><div id="toast" class="toast" role="status" aria-live="polite"></div><script src="site-config.js?v=20260822-seo1"></script><script src="app.js?v=20260822-seo1"></script><script defer src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token":"aff3e8f6812e48f08ca1f6ff199ee934"}'></script>
+</body>
+</html>
