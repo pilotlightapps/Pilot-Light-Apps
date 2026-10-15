@@ -180,8 +180,8 @@ window.PILOT_LIGHT_APPS = [
       "The app is photo-only and is not digitally signed yet."
     ],
     guides: [],
-    image: "assets/picture-pilot-icon.png",
-    imageAlt: "Picture Pilot icon with overlapping photo frames, a compass ring, and an amber confirmation mark",
+    image: "assets/picture-pilot-screenshot.jpg",
+    imageAlt: "Picture Pilot Sorter public-test window with folder controls, sorting passes, photo workspace, custom tags, Smart Groups, and verified folder building",
     downloadLabel: "Download Picture Pilot public test",
     shortDownloadLabel: "Download public test",
     downloadUrl: "https://github.com/pilotlightapps/Pilot-Light-Apps/releases/download/picture-pilot-sorter-v0.5.0-beta.7-public-test/PicturePilotSorter-Windows-0.5.0-beta.7.zip",
