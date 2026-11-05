@@ -53,12 +53,22 @@
   description.textContent = safeText(app.description);
   const actions = document.createElement("div");
   actions.className = "hero-actions";
-  actions.append(externalLink(app.downloadLabel, app.downloadUrl, "button primary"));
+  if (app.storeUrl) {
+    actions.append(externalLink(app.storeLabel, app.storeUrl, "button primary"));
+  }
+  actions.append(externalLink(app.downloadLabel, app.downloadUrl, app.storeUrl ? "button secondary" : "button primary"));
   if (app.itchUrl) {
     actions.append(externalLink(app.itchLabel || "Get it on itch.io", app.itchUrl, "button secondary"));
   }
   actions.append(externalLink(app.downloadNotice.detailsLabel, app.downloadNotice.detailsUrl, "button secondary"));
-  copy.append(back, meta, title, tagline, description, actions);
+  copy.append(back, meta, title, tagline, description);
+  if (app.storeTerms) {
+    const terms = document.createElement("p");
+    terms.className = "download-terms";
+    terms.textContent = app.storeTerms;
+    copy.appendChild(terms);
+  }
+  copy.appendChild(actions);
 
   const visual = document.createElement("div");
   visual.className = "detail-visual";
@@ -133,9 +143,18 @@
   const ctaTitle = document.createElement("h2");
   ctaTitle.textContent = `Ready to try ${safeText(app.name)}?`;
   ctaCopy.append(ctaEyebrow, ctaTitle);
+  if (app.storeTerms) {
+    const terms = document.createElement("p");
+    terms.className = "download-terms";
+    terms.textContent = app.storeTerms;
+    ctaCopy.appendChild(terms);
+  }
   const ctaActions = document.createElement("div");
   ctaActions.className = "detail-cta-actions";
-  ctaActions.append(externalLink(app.downloadLabel, app.downloadUrl, "button primary"));
+  if (app.storeUrl) {
+    ctaActions.append(externalLink(app.storeLabel, app.storeUrl, "button primary"));
+  }
+  ctaActions.append(externalLink(app.downloadLabel, app.downloadUrl, app.storeUrl ? "button secondary" : "button primary"));
   if (app.itchUrl) {
     ctaActions.append(externalLink(app.itchLabel || "Get it on itch.io", app.itchUrl, "button secondary"));
   }

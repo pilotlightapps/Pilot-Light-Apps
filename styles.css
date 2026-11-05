@@ -108,6 +108,8 @@ h3 { font-size: 1.25rem; }
 p { color: var(--muted); }
 .hero-text { max-width: 680px; margin: 0 0 2.2rem; font-size: clamp(1.06rem, 1.6vw, 1.3rem); }
 .hero-actions { display: flex; flex-wrap: wrap; gap: .8rem; }
+.download-terms { margin: 0 0 1.1rem; color: #d7e2ed; font-size: .96rem; }
+.detail-cta .download-terms { margin: 1rem 0 0; }
 
 .button {
   display: inline-flex;

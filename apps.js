@@ -26,16 +26,17 @@ window.PILOT_LIGHT_APPS = [
       "1080p, 2K and 4K preferences",
       "Favorites, dislikes, history and quick apply",
       "System-tray controls and optional Start with Windows",
-      "Optional GitHub update notifications"
+      "Optional GitHub update notifications in the portable edition"
     ],
     installSteps: [
-      "Download the portable Wallpaper Pilot EXE.",
-      "Open it. Because the app is unsigned, Windows may show an unknown-publisher or reputation warning.",
+      "Choose Microsoft Store for the 7-day trial and $1.99 USD one-time purchase, or download the free portable EXE.",
+      "Install and open the Store edition, or open the portable EXE. The direct download is unsigned and Windows may show an unknown-publisher or reputation warning.",
       "Choose the top-level folder that holds your wallpapers and include subfolders if needed.",
       "Set your rotation preferences, then leave the app open or minimize it to the system tray."
     ],
     goodToKnow: [
-      "Wallpaper Pilot runs locally and does not upload your image library or require an account.",
+      "The Microsoft Store edition offers a 7-day free trial, then a $1.99 USD one-time purchase. There is no subscription. The portable edition remains free.",
+      "Wallpaper Pilot runs locally and does not upload your image library or require a Pilot Light Apps account. Microsoft Store handles the Store edition installation and license.",
       "It asks Windows to apply one wallpaper; version 1.0.1 does not choose a different image or folder for each monitor.",
       "Uninstall can preserve or remove Wallpaper Pilot's saved data and never deletes your original wallpaper files."
     ],
@@ -58,14 +59,17 @@ window.PILOT_LIGHT_APPS = [
     ],
     image: "assets/wallpaper-pilot-screenshot.png",
     imageAlt: "Wallpaper Pilot application window with local-folder, shuffle, history, favorites, and tray controls",
-    downloadLabel: "Download Wallpaper Pilot",
-    shortDownloadLabel: "Download 1.0.1",
+    storeUrl: "https://apps.microsoft.com/detail/9NBKPH45G9RM",
+    storeLabel: "Get it from Microsoft Store",
+    storeTerms: "Microsoft Store: 7-day free trial, then $1.99 USD once. No subscription.",
+    downloadLabel: "Free portable download",
+    shortDownloadLabel: "Free portable download",
     downloadUrl: "https://github.com/pilotlightapps/Pilot-Light-Apps/releases/download/v1.0.1/Wallpaper-Pilot.exe",
     itchLabel: "Get it on itch.io",
     itchUrl: "https://echoofhumanity50.itch.io/wallpaper-pilot",
     downloadNotice: {
-      title: "Why Windows may show a warning",
-      text: "Wallpaper Pilot is independently published and is not yet digitally signed. Windows may show an unknown-publisher or reputation warning. This means the app is not yet widely recognized; it is not a notification that malware was detected. Download only from this official page.",
+      title: "About the free portable download",
+      text: "The free portable EXE is unsigned, so Windows may show an unknown-publisher or reputation warning. This notice applies to the direct download; the Store edition installs through Microsoft Store. Use the official links on this page for either edition.",
       detailsLabel: "View release details and SHA-256 fingerprint",
       detailsUrl: "https://github.com/pilotlightapps/Pilot-Light-Apps/releases/tag/v1.0.1"
     }

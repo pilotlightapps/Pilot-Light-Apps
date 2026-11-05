@@ -88,13 +88,23 @@
 
       const actions = document.createElement("div");
       actions.className = "app-actions";
-      actions.appendChild(makeButton("View app", app.pageUrl, "button primary", false));
+      if (app.storeUrl) {
+        actions.appendChild(makeButton("Microsoft Store", app.storeUrl, "button primary"));
+      }
+      actions.appendChild(makeButton("View app", app.pageUrl, app.storeUrl ? "button secondary" : "button primary", false));
       actions.appendChild(makeButton(app.shortDownloadLabel || "Download", app.downloadUrl, "button secondary"));
       if (app.itchUrl) {
         actions.appendChild(makeButton(app.itchLabel || "Get it on itch.io", app.itchUrl, "button secondary"));
       }
 
-      copy.append(meta, title, tagline, highlights, actions);
+      copy.append(meta, title, tagline, highlights);
+      if (app.storeTerms) {
+        const terms = document.createElement("p");
+        terms.className = "download-terms";
+        terms.textContent = app.storeTerms;
+        copy.appendChild(terms);
+      }
+      copy.appendChild(actions);
       article.append(visualLink, copy);
       grid.appendChild(article);
     });
