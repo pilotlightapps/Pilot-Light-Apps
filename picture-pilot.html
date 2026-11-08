@@ -13,7 +13,7 @@
   <title>Picture Pilot Sorter — Local Windows Photo Organizer Public Test</title>
   <link rel="canonical" href="https://pilotlightapps.com/picture-pilot.html">
   <link rel="icon" href="assets/pilot-light-logo.svg" type="image/svg+xml">
-  <link rel="stylesheet" href="styles.css?v=20260824-distribution1">
+  <link rel="stylesheet" href="styles.css?v=20261108-layout1">
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -44,8 +44,37 @@
       <a href="support.html">Support</a>
     </nav>
   </header>
-  <main id="app-detail" class="app-detail-main"></main>
-  <noscript><p class="notice noscript-notice">JavaScript is required to display this app page.</p></noscript>
+  <main id="app-detail" class="app-detail-main" data-prerendered="true">
+    <section class="app-detail-hero">
+      <div class="app-detail-copy">
+        <a class="back-link" href="index.html#apps">← All apps</a>
+        <div class="app-meta"><span class="badge badge-testing">Public test — not final</span><span class="platform">Windows desktop · 0.5.0-beta.7</span></div>
+        <h1>Picture Pilot Sorter</h1>
+        <p class="detail-tagline">Turn a large photo collection into useful, verified folders.</p>
+        <p class="hero-text">Picture Pilot helps you review local photo collections, account for every physical file, inspect exact duplicates, create your own tags, revisit focused sorting passes, and build organized folders without changing the originals.</p>
+
+        <div class="hero-actions"><a class="button primary" href="https://github.com/pilotlightapps/Pilot-Light-Apps/releases/download/picture-pilot-sorter-v0.5.0-beta.7-public-test/PicturePilotSorter-Windows-0.5.0-beta.7.zip" target="_blank" rel="noopener noreferrer">Download Picture Pilot public test</a><a class="button secondary" href="https://github.com/pilotlightapps/Pilot-Light-Apps/releases/tag/picture-pilot-sorter-v0.5.0-beta.7-public-test" target="_blank" rel="noopener noreferrer">View public-test notes and verify the ZIP checksum</a></div>
+      </div>
+      <div class="detail-visual"><img src="assets/picture-pilot-screenshot.jpg" alt="Picture Pilot Sorter public-test window with folder controls, sorting passes, photo workspace, custom tags, Smart Groups, and verified folder building" width="2946" height="1907"></div>
+    </section>
+    <aside class="download-notice detail-notice"><h2>Public test, backup, and unsigned-app notice</h2><p>Picture Pilot 0.5.0-beta.7 is a public test build, not a finished release. Back up irreplaceable photos and begin with a copied or non-critical folder. Do not delete originals until you have independently checked the Scan report and completed output. The app is independently published and not yet digitally signed, so Windows may show an unfamiliar-app or unknown-publisher warning. Download only from this official page.</p></aside>
+    <section class="detail-section">
+      <div class="detail-section-heading"><p class="eyebrow">What it does</p><h2>Built around the useful part.</h2></div>
+      <ul class="detail-feature-grid"><li>Custom tags with numbered keyboard shortcuts</li><li>Normal, Shift-click, and Ctrl-click multi-photo selection</li><li>Layer several tags onto the same photo</li><li>Standard similarity groups and optional local Smart Groups</li><li>All-photo, untagged-photo, and tag-filtered sorting passes</li><li>Tag browsing, Undo, and point-centered photo zoom</li><li>HEIC/HEIF and common photo formats, with a bundled local decoder for Apple images</li><li>Scan report totals for photos, videos, unsupported formats, other files, prior work, unreadable files, and exact duplicates</li><li>Browse every excluded video, unsupported image, or other file by path and extension</li><li>Side-by-side exact duplicate review with a fresh SHA-256 confirmation</li><li>New dated output folders with verified copies and one exported file per exact image per tag</li><li>Local backup, restore, and guarded uninstall tools</li><li>Built-in public-test safety notice, tutorial, and feedback shortcut</li></ul>
+    </section>
+    <section class="detail-section detail-two-column">
+      <article class="detail-panel"><p class="eyebrow">Get started</p><h2>From download to ready.</h2><ol class="step-list"><li>Download PicturePilotSorter-Windows-0.5.0-beta.7.zip.</li><li>Choose Extract All.</li><li>Run Picture Pilot Testing.exe once from the extracted folder. The first launch can take up to a minute while Windows scans and unpacks the portable app.</li><li>Follow the first-run guide, then choose a copied or non-critical photo folder for this test.</li></ol></article>
+      <article class="detail-panel"><p class="eyebrow">Good to know</p><h2>Clear before you install.</h2><ul class="plain-list"><li>This is a public test build. Back up irreplaceable photos first and begin with a copied or non-critical folder.</li><li>Do not delete original photos after building folders until you have independently checked the Scan report and completed output.</li><li>Picture Pilot stores settings and sorting history locally under your Windows Local AppData folder.</li><li>Original photos are read but never moved, renamed, edited, overwritten, or deleted.</li><li>Smart Groups runs locally and never assigns a tag without you.</li><li>Only byte-for-byte exact duplicate images are consolidated during folder building; visually similar photos are never treated as duplicates.</li><li>Videos are detected, counted, and listed so folder totals reconcile, but this app remains photo-only.</li><li>HEIC/HEIF support includes a bundled local decoder and does not require Microsoft&#39;s optional photo codecs. Damaged or unsupported variations are listed as unreadable and left untouched.</li><li>Use the in-app Feedback button to report unexpected file counts, unreadable photos, duplicate mistakes, crashes, or incorrect output.</li><li>The download contains one portable application file; release records remain on the website.</li><li>The app is photo-only and is not digitally signed yet.</li></ul></article>
+    </section>
+    <section class="detail-section">
+      <div class="detail-section-heading"><p class="eyebrow">Windows guides</p><h2>Start with the problem you are trying to solve.</h2></div>
+      <div class="guide-grid"><a class="guide-card" href="sort-large-photo-collection-windows.html"><h3>Sort a large photo collection on Windows</h3><p>Build a safe workflow for reviewing, tagging, and organizing a large local photo library without changing the originals.</p><span>Read guide →</span></a><a class="guide-card" href="organize-ai-generated-images-windows.html"><h3>Organize AI-generated images on Windows</h3><p>Turn export folders and repeated variations into useful, layered categories with manual control.</p><span>Read guide →</span></a><a class="guide-card" href="find-exact-duplicate-photos-windows.html"><h3>Find exact duplicate photos safely</h3><p>Understand byte-for-byte duplicates, visual similarity, and why a backup-first review matters.</p><span>Read guide →</span></a><a class="guide-card" href="sort-heic-photos-into-folders-windows.html"><h3>Sort HEIC photos into folders on Windows</h3><p>Review Apple HEIC and HEIF photos locally and build organized folders without replacing the source files.</p><span>Read guide →</span></a></div>
+    </section>
+    <section class="detail-cta">
+      <div><p class="eyebrow">Version 0.5.0-beta.7</p><h2>Ready to try Picture Pilot Sorter?</h2></div>
+      <div class="detail-cta-actions"><a class="button primary" href="https://github.com/pilotlightapps/Pilot-Light-Apps/releases/download/picture-pilot-sorter-v0.5.0-beta.7-public-test/PicturePilotSorter-Windows-0.5.0-beta.7.zip" target="_blank" rel="noopener noreferrer">Download Picture Pilot public test</a></div>
+    </section>
+</main>
   <footer>
     <div class="footer-brand">
       <img src="assets/pilot-light-logo.svg" alt="" width="34" height="34">
@@ -55,9 +84,9 @@
   </footer>
   <div id="toast" class="toast" role="status" aria-live="polite"></div>
   <script src="site-config.js?v=20260822-seo1"></script>
-  <script src="apps.js?v=20261015-picturepilot-beta7-screenshot-fix"></script>
+  <script src="apps.js?v=20261108-layout1"></script>
   <script src="app.js?v=20260912-picturepilot1"></script>
-  <script src="app-detail.js?v=20260912-picturepilot1"></script>
+  <script src="app-detail.js?v=20261108-layout1"></script>
   <script type="module" src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token":"f08c2ea4a9ad429890c848ad834e092c"}'></script>
 </body>
 </html>

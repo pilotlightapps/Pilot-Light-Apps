@@ -4,7 +4,7 @@
   1. Copy an app object below and give it a unique slug and pageUrl.
   2. Add a small HTML shell for that page using an existing app page as the template.
   3. Change the copy, features, image, setup notes, and version-specific links.
-  4. Put the new app image inside assets. The home directory and detail page render from this data.
+  4. Put the new app image inside assets. Run node scripts/build-product-pages.cjs after edits to refresh the static detail pages.
 */
 window.PILOT_LIGHT_APPS = [
   {
@@ -58,6 +58,8 @@ window.PILOT_LIGHT_APPS = [
       }
     ],
     image: "assets/wallpaper-pilot-screenshot.png",
+    imageWidth: 2611,
+    imageHeight: 1707,
     imageAlt: "Wallpaper Pilot application window with local-folder, shuffle, history, favorites, and tray controls",
     storeUrl: "https://apps.microsoft.com/detail/9NBKPH45G9RM",
     storeLabel: "Get it from Microsoft Store",
@@ -125,6 +127,8 @@ window.PILOT_LIGHT_APPS = [
       }
     ],
     image: "assets/display-audio-switcher-screenshot.png",
+    imageWidth: 2240,
+    imageHeight: 1520,
     imageAlt: "Display and Audio Switcher showing connected displays, audio outputs, and three saved switching profiles",
     downloadLabel: "Download Display / Audio Switcher",
     shortDownloadLabel: "Download 1.0.0",
@@ -206,6 +210,8 @@ window.PILOT_LIGHT_APPS = [
       }
     ],
     image: "assets/picture-pilot-screenshot.jpg",
+    imageWidth: 2946,
+    imageHeight: 1907,
     imageAlt: "Picture Pilot Sorter public-test window with folder controls, sorting passes, photo workspace, custom tags, Smart Groups, and verified folder building",
     downloadLabel: "Download Picture Pilot public test",
     shortDownloadLabel: "Download public test",

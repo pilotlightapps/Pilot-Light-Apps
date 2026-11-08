@@ -315,7 +315,7 @@ p { color: var(--muted); }
     #091726;
   box-shadow: var(--shadow);
 }
-.detail-visual img { width: 100%; max-height: 590px; object-fit: contain; filter: drop-shadow(0 24px 45px rgba(0,0,0,.38)); }
+.detail-visual img { width: 100%; height: auto; max-height: 590px; object-fit: contain; filter: drop-shadow(0 24px 45px rgba(0,0,0,.38)); }
 .detail-notice { margin: 0 0 88px; padding: 1.25rem 1.4rem; }
 .detail-notice h2 { margin: 0 0 .5rem; font-size: 1.05rem; letter-spacing: -.015em; }
 .detail-notice p { font-size: .92rem; }

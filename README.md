@@ -10,7 +10,7 @@ A free static website designed for GitHub Pages. App cards are data-driven so th
 - Wallpaper Pilot on itch.io: `https://echoofhumanity50.itch.io/wallpaper-pilot`
 - Display / Audio Switcher 1.0.0: `https://github.com/pilotlightapps/Pilot-Light-Apps/releases/download/display-audio-switcher-v1.0.0/DisplayAudioSwitcher-Windows.zip`
 - Display / Audio Switcher on itch.io: `https://echoofhumanity50.itch.io/display-audio-switcher`
-- Picture Pilot Sorter 0.5.0-beta.6 public test: `https://github.com/pilotlightapps/Pilot-Light-Apps/releases/download/picture-pilot-sorter-v0.5.0-beta.6-public-test/PicturePilotSorter-Windows-0.5.0-beta.6.zip`
+- Picture Pilot Sorter 0.5.0-beta.7 public test: `https://github.com/pilotlightapps/Pilot-Light-Apps/releases/download/picture-pilot-sorter-v0.5.0-beta.7-public-test/PicturePilotSorter-Windows-0.5.0-beta.7.zip`
 - Donate: `https://buymeacoffee.com/capto50z`
 - Wallpaper Pilot status: `Available`
 - Display / Audio Switcher status: `Available`
@@ -23,7 +23,7 @@ A free static website designed for GitHub Pages. App cards are data-driven so th
 The website uses version-specific GitHub release URLs. This prevents a release
 for one app from silently changing another app's Download button. When an app is
 updated, publish its new release first, verify the uploaded asset, and then change
-only that app's URL in `apps.js`.
+only that app's URL in `apps.js`, then run `node scripts/build-product-pages.cjs`.
 
 GitHub remains the canonical direct-download and checksum source. Each app's
 itch.io page is a separate discovery and download option. Keep both links in the
@@ -34,8 +34,11 @@ same app object so the homepage and dedicated page stay synchronized.
 Open `apps.js`. Copy an existing app object, give it a unique slug and page URL,
 and change its information. Copy one of the small dedicated HTML page shells and
 set its `data-app-slug` to the same slug. The home directory and full app page
-both render from the shared data, so future additions do not turn the homepage
-into one long product page.
+both use the shared data. After editing `apps.js` or the shared `app-detail.js`
+renderer, run `node scripts/build-product-pages.cjs` and commit the updated HTML
+pages. Run it with `--check` before publishing to catch stale product pages.
+The product text, screenshots, and download links are present in the initial HTML
+so visitors and search crawlers do not need JavaScript to see them.
 
 Follow `RELEASE_MANAGEMENT.md` for tag names, testing labels, checksums, public
 verification, analytics baselines, and the final status change from testing to

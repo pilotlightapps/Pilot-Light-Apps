@@ -1,166 +1,60 @@
-(() => {
-  const slug = document.body.dataset.appSlug;
-  const apps = Array.isArray(window.PILOT_LIGHT_APPS) ? window.PILOT_LIGHT_APPS : [];
-  const app = apps.find((item) => item.slug === slug);
-  const root = document.getElementById("app-detail");
-  if (!app || !root) return;
+/* Shared product-page renderer: used by Node at publication and by new page shells. */
+((scope) => {
+  const escape = (value) => String(value ?? "").replace(/[&<>"']/g, (character) => ({
+    "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;"
+  })[character]);
+  const link = (label, url, classes) => `<a class="${escape(classes)}" href="${escape(url)}" target="_blank" rel="noopener noreferrer">${escape(label)}</a>`;
+  const list = (items, classes, tag = "ul") => `<${tag} class="${classes}">${(items || []).map((text) => `<li>${escape(text)}</li>`).join("")}</${tag}>`;
 
-  const safeText = (value) => String(value ?? "");
-  const externalLink = (label, url, classes) => {
-    const link = document.createElement("a");
-    link.className = classes;
-    link.href = url;
-    link.target = "_blank";
-    link.rel = "noopener noreferrer";
-    link.textContent = label;
-    return link;
-  };
-  const list = (items, className) => {
-    const element = document.createElement("ul");
-    element.className = className;
-    items.forEach((text) => {
-      const item = document.createElement("li");
-      item.textContent = safeText(text);
-      element.appendChild(item);
-    });
-    return element;
-  };
-
-  const hero = document.createElement("section");
-  hero.className = "app-detail-hero";
-  const copy = document.createElement("div");
-  copy.className = "app-detail-copy";
-  const back = document.createElement("a");
-  back.className = "back-link";
-  back.href = "index.html#apps";
-  back.textContent = "← All apps";
-  const meta = document.createElement("div");
-  meta.className = "app-meta";
-  const badge = document.createElement("span");
-  badge.className = `badge badge-${safeText(app.statusTone).replace(/[^a-z0-9-]/gi, "").toLowerCase()}`;
-  badge.textContent = safeText(app.status);
-  const platform = document.createElement("span");
-  platform.className = "platform";
-  platform.textContent = [app.platform, app.version].filter(Boolean).join(" · ");
-  meta.append(badge, platform);
-  const title = document.createElement("h1");
-  title.textContent = safeText(app.name);
-  const tagline = document.createElement("p");
-  tagline.className = "detail-tagline";
-  tagline.textContent = safeText(app.tagline);
-  const description = document.createElement("p");
-  description.className = "hero-text";
-  description.textContent = safeText(app.description);
-  const actions = document.createElement("div");
-  actions.className = "hero-actions";
-  if (app.storeUrl) {
-    actions.append(externalLink(app.storeLabel, app.storeUrl, "button primary"));
+  function renderAppDetail(app) {
+    const terms = app.storeTerms ? `<p class="download-terms">${escape(app.storeTerms)}</p>` : "";
+    const buttons = [
+      app.storeUrl ? link(app.storeLabel, app.storeUrl, "button primary") : "",
+      link(app.downloadLabel, app.downloadUrl, app.storeUrl ? "button secondary" : "button primary"),
+      app.itchUrl ? link(app.itchLabel || "Get it on itch.io", app.itchUrl, "button secondary") : ""
+    ].join("");
+    const guides = app.guides || [];
+    const dimensions = Number.isInteger(app.imageWidth) && Number.isInteger(app.imageHeight) && app.imageWidth > 0 && app.imageHeight > 0
+      ? ` width="${app.imageWidth}" height="${app.imageHeight}"` : "";
+    return `
+    <section class="app-detail-hero">
+      <div class="app-detail-copy">
+        <a class="back-link" href="index.html#apps">← All apps</a>
+        <div class="app-meta"><span class="badge badge-${escape(app.statusTone).replace(/[^a-z0-9-]/gi, "").toLowerCase()}">${escape(app.status)}</span><span class="platform">${escape([app.platform, app.version].filter(Boolean).join(" · "))}</span></div>
+        <h1>${escape(app.name)}</h1>
+        <p class="detail-tagline">${escape(app.tagline)}</p>
+        <p class="hero-text">${escape(app.description)}</p>
+        ${terms}
+        <div class="hero-actions">${buttons}${link(app.downloadNotice.detailsLabel, app.downloadNotice.detailsUrl, "button secondary")}</div>
+      </div>
+      <div class="detail-visual"><img src="${escape(app.image)}" alt="${escape(app.imageAlt)}"${dimensions}></div>
+    </section>
+    <aside class="download-notice detail-notice"><h2>${escape(app.downloadNotice.title)}</h2><p>${escape(app.downloadNotice.text)}</p></aside>
+    <section class="detail-section">
+      <div class="detail-section-heading"><p class="eyebrow">What it does</p><h2>Built around the useful part.</h2></div>
+      ${list(app.features, "detail-feature-grid")}
+    </section>
+    <section class="detail-section detail-two-column">
+      <article class="detail-panel"><p class="eyebrow">Get started</p><h2>From download to ready.</h2>${list(app.installSteps, "step-list", "ol")}</article>
+      <article class="detail-panel"><p class="eyebrow">Good to know</p><h2>Clear before you install.</h2>${list(app.goodToKnow, "plain-list")}</article>
+    </section>
+    ${guides.length ? `<section class="detail-section">
+      <div class="detail-section-heading"><p class="eyebrow">Windows guides</p><h2>Start with the problem you are trying to solve.</h2></div>
+      <div class="guide-grid">${guides.map((guide) => `<a class="guide-card" href="${escape(guide.url)}"><h3>${escape(guide.title)}</h3><p>${escape(guide.description)}</p><span>Read guide →</span></a>`).join("")}</div>
+    </section>` : ""}
+    <section class="detail-cta">
+      <div><p class="eyebrow">Version ${escape(app.version)}</p><h2>Ready to try ${escape(app.name)}?</h2>${terms}</div>
+      <div class="detail-cta-actions">${buttons}</div>
+    </section>
+  `.replace(/[ \t]+$/gm, "");
   }
-  actions.append(externalLink(app.downloadLabel, app.downloadUrl, app.storeUrl ? "button secondary" : "button primary"));
-  if (app.itchUrl) {
-    actions.append(externalLink(app.itchLabel || "Get it on itch.io", app.itchUrl, "button secondary"));
+
+  if (typeof module !== "undefined" && module.exports) module.exports = renderAppDetail;
+  if (typeof document !== "undefined") {
+    const root = document.getElementById("app-detail");
+    // Published pages already contain the full content. Never replace it on load.
+    if (!root || root.children.length) return;
+    const app = (scope.PILOT_LIGHT_APPS || []).find((item) => item.slug === document.body.dataset.appSlug);
+    if (app) root.innerHTML = renderAppDetail(app);
   }
-  actions.append(externalLink(app.downloadNotice.detailsLabel, app.downloadNotice.detailsUrl, "button secondary"));
-  copy.append(back, meta, title, tagline, description);
-  if (app.storeTerms) {
-    const terms = document.createElement("p");
-    terms.className = "download-terms";
-    terms.textContent = app.storeTerms;
-    copy.appendChild(terms);
-  }
-  copy.appendChild(actions);
-
-  const visual = document.createElement("div");
-  visual.className = "detail-visual";
-  const image = document.createElement("img");
-  image.src = safeText(app.image);
-  image.alt = safeText(app.imageAlt);
-  visual.appendChild(image);
-  hero.append(copy, visual);
-
-  const notice = document.createElement("aside");
-  notice.className = "download-notice detail-notice";
-  const noticeTitle = document.createElement("h2");
-  noticeTitle.textContent = safeText(app.downloadNotice.title);
-  const noticeText = document.createElement("p");
-  noticeText.textContent = safeText(app.downloadNotice.text);
-  notice.append(noticeTitle, noticeText);
-
-  const features = document.createElement("section");
-  features.className = "detail-section";
-  const featureHeading = document.createElement("div");
-  featureHeading.className = "detail-section-heading";
-  featureHeading.innerHTML = '<p class="eyebrow">What it does</p><h2>Built around the useful part.</h2>';
-  features.append(featureHeading, list(app.features || [], "detail-feature-grid"));
-
-  const guides = document.createElement("section");
-  guides.className = "detail-section detail-two-column";
-  const setup = document.createElement("article");
-  setup.className = "detail-panel";
-  setup.innerHTML = '<p class="eyebrow">Get started</p><h2>From download to ready.</h2>';
-  const steps = document.createElement("ol");
-  steps.className = "step-list";
-  (app.installSteps || []).forEach((step) => {
-    const item = document.createElement("li");
-    item.textContent = safeText(step);
-    steps.appendChild(item);
-  });
-  setup.appendChild(steps);
-  const know = document.createElement("article");
-  know.className = "detail-panel";
-  know.innerHTML = '<p class="eyebrow">Good to know</p><h2>Clear before you install.</h2>';
-  know.appendChild(list(app.goodToKnow || [], "plain-list"));
-  guides.append(setup, know);
-
-  const help = document.createElement("section");
-  help.className = "detail-section";
-  const helpHeading = document.createElement("div");
-  helpHeading.className = "detail-section-heading";
-  helpHeading.innerHTML = '<p class="eyebrow">Windows guides</p><h2>Start with the problem you are trying to solve.</h2>';
-  const helpGrid = document.createElement("div");
-  helpGrid.className = "guide-grid";
-  (app.guides || []).forEach((guide) => {
-    const card = document.createElement("a");
-    card.className = "guide-card";
-    card.href = safeText(guide.url);
-    const guideTitle = document.createElement("h3");
-    guideTitle.textContent = safeText(guide.title);
-    const guideDescription = document.createElement("p");
-    guideDescription.textContent = safeText(guide.description);
-    const guideLink = document.createElement("span");
-    guideLink.textContent = "Read guide →";
-    card.append(guideTitle, guideDescription, guideLink);
-    helpGrid.appendChild(card);
-  });
-  help.append(helpHeading, helpGrid);
-
-  const cta = document.createElement("section");
-  cta.className = "detail-cta";
-  const ctaCopy = document.createElement("div");
-  const ctaEyebrow = document.createElement("p");
-  ctaEyebrow.className = "eyebrow";
-  ctaEyebrow.textContent = `Version ${safeText(app.version)}`;
-  const ctaTitle = document.createElement("h2");
-  ctaTitle.textContent = `Ready to try ${safeText(app.name)}?`;
-  ctaCopy.append(ctaEyebrow, ctaTitle);
-  if (app.storeTerms) {
-    const terms = document.createElement("p");
-    terms.className = "download-terms";
-    terms.textContent = app.storeTerms;
-    ctaCopy.appendChild(terms);
-  }
-  const ctaActions = document.createElement("div");
-  ctaActions.className = "detail-cta-actions";
-  if (app.storeUrl) {
-    ctaActions.append(externalLink(app.storeLabel, app.storeUrl, "button primary"));
-  }
-  ctaActions.append(externalLink(app.downloadLabel, app.downloadUrl, app.storeUrl ? "button secondary" : "button primary"));
-  if (app.itchUrl) {
-    ctaActions.append(externalLink(app.itchLabel || "Get it on itch.io", app.itchUrl, "button secondary"));
-  }
-  cta.append(ctaCopy, ctaActions);
-
-  root.append(hero, notice, features, guides);
-  if ((app.guides || []).length) root.append(help);
-  root.append(cta);
-})();
+})(typeof window !== "undefined" ? window : globalThis);

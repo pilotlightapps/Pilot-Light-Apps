@@ -74,3 +74,8 @@ URL when the bytes change so an old checksum never describes a newer file.
 - Website visitors, Download-button selections, GitHub asset downloads, and
   completed installations must be reported as different measurements.
 - Record each app's asset baseline in `ANALYTICS_BASELINE.md` before marketing.
+
+
+## Product-page publishing check
+
+After updating `apps.js` or `app-detail.js`, run `node scripts/build-product-pages.cjs`, then `node scripts/build-product-pages.cjs --check`. Commit all generated product HTML with the shared data. Every app screenshot needs its real `imageWidth` and `imageHeight` in `apps.js` so the browser reserves its space before loading. Review the pages at desktop and phone widths before publication.
