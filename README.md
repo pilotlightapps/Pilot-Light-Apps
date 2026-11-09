@@ -15,10 +15,11 @@ A free static website designed for GitHub Pages. App cards are data-driven so th
 - Wallpaper Pilot status: `Available`
 - Display / Audio Switcher status: `Available`
 - Picture Pilot Sorter status: `Public test — not final`
+- Video Pilot status: `Public test — not final`
 - Screenshot: `assets/wallpaper-pilot-screenshot.png`
 - Switcher screenshot: `assets/display-audio-switcher-screenshot.png`
 - Picture Pilot screenshot: `assets/picture-pilot-screenshot.jpg`
-- Dedicated pages: `wallpaper-pilot.html`, `display-audio-switcher.html`, and `picture-pilot.html`
+- Dedicated pages: `wallpaper-pilot.html`, `display-audio-switcher.html`, `picture-pilot.html`, and `video-pilot.html`
 
 The website uses version-specific GitHub release URLs. This prevents a release
 for one app from silently changing another app's Download button. When an app is
@@ -67,3 +68,14 @@ See `ANALYTICS_BASELINE.md` for the starting count and its limitations.
 ## Preview on your computer
 
 Double-click `index.html`. The site can also be previewed with a local web server, but one is not required for basic review.
+
+## Video Pilot public-test release
+
+Video Pilot 0.1.0-beta.7 uses tag `video-pilot-v0.1.0-beta.7-public-test` and
+portable asset `VideoPilot-Windows-0.1.0-beta.7.zip`. Its dedicated page is
+`video-pilot.html` and screenshot is `assets/video-pilot-screenshot.png`.
+The prerelease includes separate third-party source ZIP parts, SHA-256 checksums,
+tester instructions, privacy and release notes. Publish and verify the assets
+before deploying the listing. Keep the existing stable app marked Latest.
+VEGAS import/render, physical restart/resume, another PC and AMD hardware remain
+tester acceptance targets; keep Video Pilot labeled Public test — not final.

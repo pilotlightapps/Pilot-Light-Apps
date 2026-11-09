@@ -197,3 +197,22 @@ links keep each app's GitHub asset count separate as the catalog expands.
   Only byte-for-byte identical files are consolidated during folder building;
   similar-looking images are never treated as duplicates, and originals remain
   untouched.
+
+## November 9 Video Pilot public-test release
+
+Video Pilot `0.1.0-beta.7` was published as a **Public test — not final** prerelease. Stable Latest remains `v1.0.1`. All eight public files were downloaded without authentication and their complete byte counts and SHA-256 hashes matched the reviewed package.
+
+| Asset | Count before verification | Full verification downloads | Count after verification |
+| --- | ---: | ---: | ---: |
+| SHA256SUMS.txt | 0 | 1 | 0 |
+| Privacy.txt | 0 | 1 | 0 |
+| Third-party-sources.txt | 0 | 1 | 0 |
+| Tester-guide.txt | 0 | 1 | 0 |
+| Release-notes.md | 0 | 1 | 0 |
+| VideoPilot-Windows-0.1.0-beta.7.zip | 0 | 1 | 0 |
+| VideoPilot-ThirdParty-Sources-0.1.0-beta.7-Part2.zip | 0 | 1 | 0 |
+| VideoPilot-ThirdParty-Sources-0.1.0-beta.7-Part1.zip | 0 | 1 | 0 |
+
+These include our verification activity. GitHub counters can lag; do not treat the counts as new users, installations, successful tests, or website visits. Keep source/document downloads separate from the portable app. App ZIP SHA-256: `477e9b64e80797c17fd44c89f60bc0a8408ddcf0a8c132c8549af6d35e1ce1f7`.
+
+Actual VEGAS import/render, another PC, physical restart/resume and AMD hardware remain open acceptance tests.

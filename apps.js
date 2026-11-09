@@ -222,5 +222,65 @@ window.PILOT_LIGHT_APPS = [
       detailsLabel: "View public-test notes and verify the ZIP checksum",
       detailsUrl: "https://github.com/pilotlightapps/Pilot-Light-Apps/releases/tag/picture-pilot-sorter-v0.5.0-beta.7-public-test"
     }
+  },
+  {
+    "slug": "video-pilot",
+    "pageUrl": "video-pilot.html",
+    "name": "Video Pilot",
+    "status": "Public test — not final",
+    "statusTone": "testing",
+    "platform": "Windows 10/11 x64",
+    "version": "0.1.0-beta.7",
+    "tagline": "Prepare video for VEGAS, or upscale it with local AI.",
+    "description": "Convert MP4 and MKV videos to editing-friendly H.264/AAC, or upscale to 1080p and 4K with local AI. Review comparisons, set options for each queued video, and keep the originals.",
+    "homeHighlights": [
+      "H.264/AAC for editing",
+      "1080p + 4K upscaling",
+      "Local queue + resume"
+    ],
+    "features": [
+      "Compatibility-only mode keeps source size and frame timing, with AI enhancement off",
+      "1080p and 4K targets for landscape and portrait video",
+      "Smooth Motion (M1) and Fine Detail (M3) with adjustable blending strength",
+      "Clean finished videos or short full-view and centre-detail comparisons",
+      "Drag and drop files or folders, then edit each queued video separately",
+      "Visible destinations and separate output files; originals stay in place",
+      "NVIDIA encoding, AMD encoding in beta, and CPU fallback",
+      "Local progress, safe pause and saved checkpoints for resuming",
+      "Website and optional donation links; no account or subscription required"
+    ],
+    "installSteps": [
+      "Download VideoPilot-Windows-0.1.0-beta.7.zip.",
+      "Choose Extract All and keep every extracted file and folder together.",
+      "Open Video Pilot.exe. Start with a short copied or non-critical test clip.",
+      "Select a queued video, choose its task and destination, and wait for Saved or click Save options.",
+      "Press Start / resume. Review the finished video before relying on it in an edit."
+    ],
+    "goodToKnow": [
+      "This is a public test build. Keep the originals and begin with a short test clip.",
+      "Windows 10/11 x64, .NET Framework 4.8 and Microsoft Visual C++ x64 Redistributable are required. AI upscaling also needs a Vulkan-capable graphics driver.",
+      "Compatibility-only mode converts format without AI smoothing or upscaling. The combined task upscales and exports H.264/AAC in one job.",
+      "AMD encoding is included in beta but has not yet been verified on an AMD graphics card.",
+      "This build supports common SDR, progressive, square-pixel footage. HDR, interlaced and anamorphic inputs are held for separate treatment.",
+      "AI and comparison jobs require constant frame timing. Clean compatibility conversion can preserve variable frame timing.",
+      "An unfinished AI checkpoint may repeat after resuming; a whole-file compatibility encode restarts if interrupted.",
+      "The app is unsigned. Windows may show an unknown-publisher or reputation warning. Download only through the official links.",
+      "Actual VEGAS import/render, restarting and resuming on another Windows computer, and AMD hardware testing are part of this test round.",
+      "Report problems through the Pilot Light Apps support page or GitHub issues. Include the app version, Windows version, graphics card, chosen options and the error text; avoid posting private videos or personal paths."
+    ],
+    "guides": [{"title":"Microsoft runtime setup","description":"Install the supported Microsoft Visual C++ x64 Redistributable from Microsoft if the app reports that its processing runtime is missing.","url":"https://learn.microsoft.com/en-us/cpp/windows/latest-supported-vc-redist"}],
+    "image": "assets/video-pilot-screenshot.png",
+    "imageWidth": 2386,
+    "imageHeight": 1871,
+    "imageAlt": "Video Pilot public-test interface with per-video render options, destination, editable queue, local progress and pause controls",
+    "downloadLabel": "Download Video Pilot public test",
+    "shortDownloadLabel": "Download public test",
+    "downloadUrl": "https://github.com/pilotlightapps/Pilot-Light-Apps/releases/download/video-pilot-v0.1.0-beta.7-public-test/VideoPilot-Windows-0.1.0-beta.7.zip",
+    "downloadNotice": {
+      "title": "Public test and unsigned-app notice",
+      "text": "Video Pilot 0.1.0-beta.7 is a testing build. Begin with a short copied clip and keep the original. AI upscaling needs a Vulkan-capable GPU. AMD hardware and separate-computer VEGAS checks are still part of testing. The portable app is unsigned; read the release notes and verify the ZIP checksum before running it.",
+      "detailsLabel": "View test notes, licenses and SHA-256 checksum",
+      "detailsUrl": "https://github.com/pilotlightapps/Pilot-Light-Apps/releases/tag/video-pilot-v0.1.0-beta.7-public-test"
+    }
   }
 ];
