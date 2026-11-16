@@ -71,9 +71,9 @@ Double-click `index.html`. The site can also be previewed with a local web serve
 
 ## Video Pilot public-test release
 
-Video Pilot 0.1.0-beta.7 uses tag `video-pilot-v0.1.0-beta.7-public-test` and
-portable asset `VideoPilot-Windows-0.1.0-beta.7.zip`. Its dedicated page is
-`video-pilot.html` and screenshot is `assets/video-pilot-screenshot.png`.
+Video Pilot 0.1.0-beta.8 uses tag `video-pilot-v0.1.0-beta.8-public-test` and
+portable asset `VideoPilot-Windows-0.1.0-beta.8.zip`. Its dedicated page is
+`video-pilot.html` and screenshot is `assets/video-pilot-screenshot-beta8.png`.
 The prerelease includes separate third-party source ZIP parts, SHA-256 checksums,
 tester instructions, privacy and release notes. Publish and verify the assets
 before deploying the listing. Keep the existing stable app marked Latest.
